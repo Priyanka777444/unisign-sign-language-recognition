@@ -26,7 +26,9 @@ Python, TensorFlow/Keras, OpenCV, MediaPipe, scikit-learn, NumPy
 ## Status
 
 - Recognition model trained and validated in Google Colab (see `Model_02.ipynb`)
-- Mobile app in development — [link to be added once public]
+- Mobile app currently in **Early Access** (closed testing) on Google Play
+  - Join the tester group: https://groups.google.com/g/unisign09/
+  - Then access the app: https://play.google.com/store/apps/details?id=com.unisign.app
 
 ## Dataset
 
