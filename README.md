@@ -4,15 +4,15 @@ Real-time Gujarat Sign Language (GSL) recognition system that translates hand ge
 
 ## Overview
 
-Unisign uses MediaPipe for hand/pose keypoint extraction and a CNN + ConvLSTM2D-based deep learning model to classify sign language gestures from short video clips in real time.
+Unisign uses MediaPipe for hand-region extraction and a Conv3D + LSTM model to classify sign language gestures from short video clips in real time.
 
 ## Architecture
 
-1. **Video Input** — short video clips of individual signs, sampled at 10 evenly-spaced frames per clip
-2. **Hand Region Extraction** — MediaPipe Hands detects hand landmarks per frame; the frame is cropped to the hand's bounding region
-3. **Edge Feature Extraction** — Canny edge detection is applied to the cropped hand region, then resized to 128×128 grayscale, to emphasize gesture shape over background/lighting variation
-4. **Temporal Modeling** — Conv3D + MaxPooling3D extract spatio-temporal features across the frame sequence, followed by an LSTM layer to model motion over time
-5. **Classification** — Dense softmax layer outputs a prediction across the trained sign classes
+1. **Video Input** – short video clips of individual signs, sampled at 10 evenly-spaced frames per clip
+2. **Hand Region Extraction** – MediaPipe Hands detects hand landmarks per frame; the frame is cropped to the hand's bounding region
+3. **Edge Feature Extraction** – Canny edge detection is applied to the cropped hand region, then resized to 128×128 grayscale, to emphasize gesture shape over background/lighting variation
+4. **Temporal Modeling** – Conv3D + MaxPooling3D extract spatio-temporal features across the frame sequence, followed by an LSTM layer to model motion over time
+5. **Classification** – Dense softmax layer outputs a prediction across the trained sign classes
 
 ## Tech Stack
 
